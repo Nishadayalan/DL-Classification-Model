@@ -131,6 +131,7 @@ new_model = Model()
 new_model.load_state_dict(torch.load('IrisDatasetModel.pt'))
 new_model.eval()
 ```
+```
 with torch.no_grad():
     y_val = new_model.forward(X_test)
     loss = criterion(y_val, y_test)
